@@ -77,6 +77,8 @@ df <- purrr::map(url_dat, purrr::possibly(WikiPoliticians, NULL)) %>%
   purrr::compact() %>%
   dplyr::bind_rows() %>%
   distinct(politician_name, .keep_all = TRUE)
+  
+df
 ```
 
 ### Cleaning Biographical Data
@@ -100,6 +102,8 @@ final_pol <- wiki_pol_raw %>%
   mutate(age = str_extract_all(age, "\\d{1,3}", "")) %>%
   mutate(age = na_if(age, "character0")) %>%
   dplyr::select(politician, wiki_name, birthday, death_date, age, bio, military_service, personal_details)
+  
+final_pol
 ```
 
 ## Authors
