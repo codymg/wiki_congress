@@ -71,7 +71,7 @@ Now that we have functions that get the requested name and biographical infromat
 ```
 #you can use the Wikipedia name "John_McCain" stored as url_dat as an example
 
-url_dat <- "John_McCain
+url_dat <- "John_McCain"
 
 df <- purrr::map(url_dat, purrr::possibly(WikiPoliticians, NULL)) %>%
   purrr::compact() %>%
