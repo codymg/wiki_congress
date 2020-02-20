@@ -15,7 +15,6 @@ library(ggthemes)
 ###############################################################
 ###############################################################
 
-
 url_home <- paste0("https://en.wikipedia.org/wiki/")
 
 election <- paste0("_United_States_Senate_elections")
