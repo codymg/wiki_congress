@@ -156,3 +156,5 @@ final_df <- dta %>%
 
 write_rds(final_df, "wiki_knesset_bios.rds")
 
+write.csv(final_df, "wiki_knesset_bios.csv")
+
