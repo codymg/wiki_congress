@@ -97,7 +97,7 @@ WikiPoliticians <- function(url_dat) {
 
 names(df)
 
-df <- readRDS("~/israeli_knesset_members.rds")
+df <- readRDS(url("https://github.com/codymg/wiki_legislatures/raw/master/data/israeli_knesset_members.rds"))
 
 dat <- df %>% mutate(Member = str_replace_all(.$Member, "\\s", "_"),
                      MK = str_replace_all(.$MK, "\\s", "_"),
